@@ -29,14 +29,22 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain how to build stateful class components.
+in order to build a class component you need to instantiate a subclass of React.Component that takes a couple baked in methods: similar to vanilla js, your class needs a constructor() that takes a super() call. This is where you're creating your state and passing in props. The other crucial piece is the 
+render() method, which tells react what to put in the Dom. Additionally, you'll need to use this.state / this.props to invoke those features of the new class.
 
 2. Describe the different phases of the component lifecycle.
+Mounting (birth): A component mounts when it is instantiated in the DOM. This is where API calls should be made.
+Updating (life): this is when the user interacts with a component and its state is being manipulated.
+Unmounting (death): This is when the component is removed from the DOM. This is the cleanup phase for your app's components.
 
 3. Demonstrate an understanding of class component lifecycle methods.
+componentDidMount(), componentDidUpdate(), and componentDidUnmount() are the three methods that are tied to the respective stages in a components lifecycle. 
 
 4. Define stateful logic.
+Stateful logic is logic that involves state! In the case of custom hooks, it's a behavior created by one or more hooks.
 
 5. Describe how to test a React component with React Testing Library.
+You need to Arrange, Act, and Assert. Arrange your tests so that they are querying the appropriate parts of your app. Act on those components to ensure they are engaging in expected behavior. Assert whether their behavior leads to predicted results.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
