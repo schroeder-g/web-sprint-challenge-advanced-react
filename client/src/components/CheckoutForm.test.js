@@ -23,14 +23,18 @@ test("form shows success message on submit with form details", () => {
 
     //input form values
     fireEvent.input(fName, { target: {value: "Monsieur"}})
+    expect(fName).toHaveValue("Monsieur")
     fireEvent.input(lName, { target: {value: "Mikado"}})
     fireEvent.input(address, { target: {value: "1369 Penfield Road"}})
     fireEvent.input(city, { target: {value: "State College"}})
     fireEvent.input(state, { target: {value: "PA"}})
     fireEvent.input(zip, { target: {value: "16801"}})
+    
+    screen.debug()
 
     //submit form
     fireEvent.click(submit)
+    
 
     //grab success message
     const success = screen.getByText(/State College, PA 16801/i)
