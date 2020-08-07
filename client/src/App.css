@@ -91,6 +91,12 @@ p {
   margin: 0;
 }
 
+nav { 
+  display: flex;
+  align-items:  center;
+  max-width: 100vw;
+}
+
 .cart {
   width: 800px;
   margin: 0 auto;
@@ -241,13 +247,24 @@ pre {
   padding: 3px 15px;
   margin-right: 15px;
   position: relative;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 16px;
 }
 
 .steps li:last-child {
   border: none;
 }
 
+.steps button {
+  padding-bottom: 5px;
+}
+
 .active {
   color: #0e101c;
   border-bottom: 2px solid !important;
+}
+
+.light-mode {
+  background-color: #ecf0f1;
 }
